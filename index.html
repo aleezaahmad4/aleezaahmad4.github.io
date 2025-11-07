@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>aleeza ahmad — Web Designer & Web Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Simple icons (optional) -->
+  <script defer>
+    // Mobile nav toggle
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-toggle').classList.toggle('open');
+    }
+  </script>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a class="brand" href="#home">aleeza ahmad</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+       
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Aleeza Ahmad</span></h1>
+        <p class="role">Web Designer &amp; Web Developer</p>
+        <p class="lead">
+          A passionate front-end developer and designer who crafts clean, responsive and user-centered websites.
+          I combine design thinking with solid front-end skills to build delightful web experiences.
+        </p>
+
+        <div class="hero-cta">
+      <a href="cv/Aleeza Ahmad(CV).pdf" download class="btn">Download CV</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section-skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-pill">HTML5</div>
+        <div class="skill-pill">CSS3</div>
+        <div class="skill-pill">JavaScript</div>
+        <div class="skill-pill">Responsive Design</div>
+        <div class="skill-pill">Wordpress</div>
+        <div class="skill-pill">Frameworks ( uiverse/ uikit / Bootstrap)</div>
+        <div class="skill-pill">Version Control (Git / GitHub)</div>
+        <div class="skill-pill">Template-designing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">
+        I am a web designer and web developer with a strong eye for detail and a love for pixel-perfect interfaces.
+        I enjoy turning ideas into functional, responsive websites and interfaces — from wireframes to final code.
+        I focus on accessibility, responsive layouts, and maintainable front-end code.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section-projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Two of my recent works </p>
+
+      <div class="projects-grid">
+        <!-- Project card 1 (replace href, image, text later) -->
+        <article class="project">
+          <div class="project-thumb">
+            <img src="images/5.png" alt="Project 1 screenshot ">
+          </div>
+          <div class="project-info">
+            <h3>Project One — Client Site</h3>
+            <p>A production website built for a client with responsive layout and clean UI. Built with HTML, CSS, and JavaScript.</p>
+            <div class="project-links">
+              <a href="https://wondrous-wisp-4c9009.netlify.app"
+       target="_blank" 
+       class="btn-live">
+       Live Demo
+    </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 2 (replace href, image, text later) -->
+        <article class="project">
+          <div class="project-thumb">
+            <img src="images/2.png" alt="Project 2 screenshot ">
+          </div>
+          <div class="project-info">
+            <h3>Project Two — UI / Landing</h3>
+            <p>A landing page / design-focused project showcasing UI/UX and responsive components. Built with modern frontend techniques.</p>
+            <div class="project-links">
+           <a href="https://magnificent-mousse-14cc51.netlify.app" 
+       target="_blank" 
+       class="btn-live">
+       Live Demo
+    </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      
+    </div>
+  </section>
+
+<!-- ===== Work Showcase Section ===== -->
+<section class="work-section" id="work">
+  <h2 class="section-title">My Work</h2>
+  <p class="section-subtitle">Click any image to view full preview</p>
+
+  <div class="work-grid">
+    <!-- Example project thumbnails -->
+    <div class="work-item">
+      <img src="images/1.png" alt="HTML CSS Website" onclick="openPopup(this.src)">
+      <h3>Portfolio using HTML & CSS</h3>
+    </div>
+
+    <div class="work-item">
+      <img src="images/6.png" alt="Slider " onclick="openPopup(this.src)">
+      <h3>Slider</h3>
+    </div>
+
+    <div class="work-item">
+      <img src="images/3.png" alt="Header Design" onclick="openPopup(this.src)">
+      <h3>Header Design</h3>
+    </div>
+
+    <div class="work-item">
+      <img src="images/4.png" alt="No-code Website" onclick="openPopup(this.src)">
+      <h3>No-code Landing Page</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Image Popup ===== -->
+<div id="popup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img id="popupImg" src="" alt="Full Image">
+</div>
+<script>
+  function openPopup(src) {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("popupImg").src = src;
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+
+  <section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+      
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+
+        <div class="info-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>aleezaahmad13@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <h4>GitHub</h4>
+            <p>github.com/aleezayahmad4</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/aleeza-ahmad</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message Form -->
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder="Your name" required />
+
+          <label>Email</label>
+          <input type="email" placeholder="Your email" required />
+
+          <label>Message</label>
+          <textarea rows="5" placeholder="Your message" required></textarea>
+
+          <button type="submit" class="send-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> aleeza ahmad — Web Designer &amp; Web Developer</p>
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
